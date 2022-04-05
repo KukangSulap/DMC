@@ -16,6 +16,7 @@
             android:name=".ListRestaurantActivity"
             android:exported="false" />
         <activity
+            android:label="Hotels"
             android:name=".ListHotelActivity"
             android:exported="false" />
         <activity

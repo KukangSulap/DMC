@@ -19,6 +19,7 @@ class HotelAdapter extends RecyclerView.Adapter<ViewHolder> {
    @Override
    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
       holder.txtHotelName.setText(hotel_names[position]);
+      holder.txtHotelDesc.setText(hotel_desc[position]);
 
    }
 
@@ -28,7 +29,16 @@ class HotelAdapter extends RecyclerView.Adapter<ViewHolder> {
    }
 
    String[] hotel_names = {
-           "hotel 1", "hotel 2", "hotel 3", "hotel 4", "hotel 5", "hotel 6"
+           "Hotel 1", "Hotel 2", "Hotel 3", "Hotel 4", "Hotel 5", "Hotel 6"
+   };
+
+   String[] hotel_desc = {
+           "Teemo scampers around, passively increasing his Move Speed until he is struck by an enemy champion or turret. ",
+           "Itto is a tall man with a large build. He has white spiked hair with pale red streaks that goes down to his back. ",
+           "Teemo scampers around, passively increasing his Move Speed until he is struck by an enemy champion or turret. ",
+           "Itto is a tall man with a large build. He has white spiked hair with pale red streaks that goes down to his back.",
+           "He is the courageous and reliable general of the Watatsumi Army, a leader whose men can always place their trust in.",
+           "He is the courageous and reliable general of the Watatsumi Army, a leader whose men can always place their trust in."
    };
 
 }
