@@ -6,7 +6,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 class ViewHolder extends RecyclerView.ViewHolder {
-   TextView txtHotelName, txtHotelDesc;
+   TextView txtHotelName, txtHotelDesc, txtTitleHotel, txtDetailDescHotel;
 
    public ViewHolder(View itemView) {
       super(itemView);

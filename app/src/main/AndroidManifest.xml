@@ -10,15 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DMCProjectPrayge">
         <activity
+            android:name=".DetailHotel"
+            android:exported="false" />
+        <activity
             android:name=".ListTourSpotActivity"
             android:exported="false" />
         <activity
             android:name=".ListRestaurantActivity"
             android:exported="false" />
         <activity
-            android:label="Hotels"
             android:name=".ListHotelActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Hotels" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

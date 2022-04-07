@@ -25,4 +25,5 @@ public class ListHotelActivity extends AppCompatActivity {
     public int getAdapterPosition() {
         return adapterPosition;
     }
+
 }
