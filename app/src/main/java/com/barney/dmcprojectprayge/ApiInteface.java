@@ -1,7 +1,5 @@
 package com.barney.dmcprojectprayge;
 
-import com.barney.dmcprojectprayge.model.ResponseChampion;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 

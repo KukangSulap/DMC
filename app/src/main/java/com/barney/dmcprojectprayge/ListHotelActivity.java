@@ -6,6 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class ListHotelActivity extends AppCompatActivity {
     RecyclerView view;
     HotelAdapter adapter;
@@ -24,6 +28,25 @@ public class ListHotelActivity extends AppCompatActivity {
 
     public int getAdapterPosition() {
         return adapterPosition;
+    }
+
+    private void loadData() {
+        ApiService apiService = ApiService.getInstance();
+        Call<ResponseChampion> call = (Call<ResponseChampion>) apiService;
+        call.enqueue(new Callback<ResponseChampion>() {
+            @Override
+            public void onResponse(Call<ResponseChampion> call, Response<ResponseChampion> response) {
+
+//                    List<ArticlesItem> articlesItems = response.body().getArticles();
+//                    Log.e("Response",response.body().getStatus());
+//                    rvNews.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+//                    CustomAdapter adapter = new CustomAdapter(articlesItems, MainActivity.this);
+//                    rvNews.setAdapter(adapter);
+            }
+            @Override
+            public void onFailure(Call<com.barney.dmcprojectprayge.model.ResponseChampion> call, Throwable t) {
+            }
+        });
     }
 
 }
