@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.barney.dmcprojectprayge.adapter.HotelAdapter;
 import com.barney.dmcprojectprayge.model.HotelItem;
 import com.barney.dmcprojectprayge.model.ResponseHotel;
 import com.barney.dmcprojectprayge.rest.ApiInterface;
@@ -19,9 +20,9 @@ import retrofit2.Response;
 
 
 public class ListHotelActivity extends AppCompatActivity {
-    RecyclerView view;
+    private RecyclerView view;
     HotelAdapter adapter;
-    int adapterPosition;
+    private int adapterPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

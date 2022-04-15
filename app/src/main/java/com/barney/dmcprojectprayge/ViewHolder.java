@@ -5,13 +5,15 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-class ViewHolder extends RecyclerView.ViewHolder {
-   TextView txtHotelName, txtHotelDesc, txtTitleHotel, txtDetailDescHotel;
+public class ViewHolder extends RecyclerView.ViewHolder {
+   public TextView txtHotelName,txtHotelDesc, txtRestoName, txtRestoRating;
 
    public ViewHolder(View itemView) {
       super(itemView);
       txtHotelName = itemView.findViewById(R.id.txtHotelName);
       txtHotelDesc = itemView.findViewById(R.id.txtDescHotel);
+      txtRestoName = itemView.findViewById(R.id.txtRestaurantName);
+      txtRestoRating = itemView.findViewById(R.id.txtRatingRestaurant);
 
    }
 }

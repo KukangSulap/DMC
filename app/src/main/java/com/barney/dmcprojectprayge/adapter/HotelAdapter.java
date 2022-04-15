@@ -1,4 +1,4 @@
-package com.barney.dmcprojectprayge;
+package com.barney.dmcprojectprayge.adapter;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -8,12 +8,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.barney.dmcprojectprayge.DetailHotel;
+import com.barney.dmcprojectprayge.R;
+import com.barney.dmcprojectprayge.ViewHolder;
 import com.barney.dmcprojectprayge.model.HotelItem;
 
 import java.util.List;
 
-class HotelAdapter extends RecyclerView.Adapter<ViewHolder>{
-   List<HotelItem> hotelItems;
+public class HotelAdapter extends RecyclerView.Adapter<ViewHolder>{
+   private List<HotelItem> hotelItems;
 
    public HotelAdapter(List<HotelItem> hotelItems) {
       this.hotelItems = hotelItems;
