@@ -30,23 +30,4 @@ public class ListHotelActivity extends AppCompatActivity {
         return adapterPosition;
     }
 
-    private void loadData() {
-        ApiService apiService = ApiService.getInstance();
-        Call<ResponseChampion> call = (Call<ResponseChampion>) apiService;
-        call.enqueue(new Callback<ResponseChampion>() {
-            @Override
-            public void onResponse(Call<ResponseChampion> call, Response<ResponseChampion> response) {
-
-//                    List<ArticlesItem> articlesItems = response.body().getArticles();
-//                    Log.e("Response",response.body().getStatus());
-//                    rvNews.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-//                    CustomAdapter adapter = new CustomAdapter(articlesItems, MainActivity.this);
-//                    rvNews.setAdapter(adapter);
-            }
-            @Override
-            public void onFailure(Call<com.barney.dmcprojectprayge.model.ResponseChampion> call, Throwable t) {
-            }
-        });
-    }
-
 }
