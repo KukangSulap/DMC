@@ -8,6 +8,8 @@ import android.os.Bundle;
 
 import com.barney.dmcprojectprayge.model.HotelItem;
 import com.barney.dmcprojectprayge.model.ResponseHotel;
+import com.barney.dmcprojectprayge.rest.ApiInterface;
+import com.barney.dmcprojectprayge.rest.ApiService;
 
 import java.util.List;
 
@@ -39,7 +41,7 @@ public class ListHotelActivity extends AppCompatActivity {
 
     private void loadData() {
         ApiInterface apiService = ApiService.getInstance();
-        Call<ResponseHotel> call = apiService.apiService();
+        Call<ResponseHotel> call = apiService.apiServiceHotel();
         call.enqueue(new Callback<ResponseHotel>() {
             @Override
             public void onResponse(Call<ResponseHotel> call, Response<ResponseHotel> response) {

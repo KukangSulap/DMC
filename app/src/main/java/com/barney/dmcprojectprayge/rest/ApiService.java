@@ -1,9 +1,9 @@
-package com.barney.dmcprojectprayge;
+package com.barney.dmcprojectprayge.rest;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-class ApiService {
+public class ApiService {
    private static final String Weburl = "https://cushioned-specialty.000webhostapp.com/";
 
    private static Retrofit setInit() {
