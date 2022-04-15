@@ -8,7 +8,16 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.barney.dmcprojectprayge.model.HotelItem;
+
+import java.util.List;
+
 class HotelAdapter extends RecyclerView.Adapter<ViewHolder>{
+   List<HotelItem> hotelItems;
+
+   public HotelAdapter(List<HotelItem> hotelItems) {
+      this.hotelItems = hotelItems;
+   }
 
    @Override
    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -18,15 +27,15 @@ class HotelAdapter extends RecyclerView.Adapter<ViewHolder>{
 
    @Override
    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-      holder.txtHotelName.setText(hotel_names[position]);
-      holder.txtHotelDesc.setText(hotel_desc[position]);
+      holder.txtHotelName.setText(hotelItems.get(position).getHotelName());
+      holder.txtHotelDesc.setText(hotelItems.get(position).getHotelDesc());
 
       holder.itemView.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View view) {
             Intent intent = new Intent(view.getContext(), DetailHotel.class);
-            intent.putExtra("hotel_names", hotel_names[holder.getAdapterPosition()]);
-            intent.putExtra("hotel_desc", hotel_desc[holder.getAdapterPosition()]);
+            intent.putExtra("hotel_names", hotelItems.get(holder.getAdapterPosition()).getHotelName());
+            intent.putExtra("hotel_desc", hotelItems.get(holder.getAdapterPosition()).getHotelDesc());
             view.getContext().startActivity(intent);
          }
       });
@@ -35,20 +44,7 @@ class HotelAdapter extends RecyclerView.Adapter<ViewHolder>{
 
    @Override
    public int getItemCount() {
-      return hotel_names.length;
+      return hotelItems.size();
    }
-
-   String[] hotel_names = {
-           "Hotel 1", "Hotel 2", "Hotel 3", "Hotel 4", "Hotel 5", "Hotel 6"
-   };
-
-   String[] hotel_desc = {
-           "Teemo scampers around, passively increasing his Move Speed until he is struck by an enemy champion or turret. ",
-           "Itto is a tall man with a large build. He has white spiked hair with pale red streaks that goes down to his back. ",
-           "Teemo scampers around, passively increasing his Move Speed until he is struck by an enemy champion or turret. ",
-           "Itto is a tall man with a large build. He has white spiked hair with pale red streaks that goes down to his back.",
-           "He is the courageous and reliable general of the Watatsumi Army, a leader whose men can always place their trust in.",
-           "He is the courageous and reliable general of the Watatsumi Army, a leader whose men can always place their trust in."
-   };
 
 }
