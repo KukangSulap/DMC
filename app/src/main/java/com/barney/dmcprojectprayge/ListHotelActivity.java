@@ -30,9 +30,6 @@ public class ListHotelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_hotel);
 
         view = findViewById(R.id.listHotel);
-//        view.setLayoutManager(new LinearLayoutManager(this));
-//        adapter = new HotelAdapter();
-//        view.setAdapter(adapter);
         loadData();
     }
 

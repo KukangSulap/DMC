@@ -9,7 +9,6 @@ public class DetailHotel extends AppCompatActivity {
 
     private TextView txtDetailDescHotel, txtTitleHotel;
     private String header, deskripsi;
-    public PassData delegate;
 
 
     @Override
@@ -26,12 +25,5 @@ public class DetailHotel extends AppCompatActivity {
         txtTitleHotel.setText(header);
         txtDetailDescHotel.setText(deskripsi);
 
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        delegate.refreshView();
     }
 }
