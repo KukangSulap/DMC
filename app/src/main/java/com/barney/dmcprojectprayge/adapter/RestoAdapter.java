@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.barney.dmcprojectprayge.DetailHotel;
+import com.barney.dmcprojectprayge.DetailRestaurant;
 import com.barney.dmcprojectprayge.R;
 import com.barney.dmcprojectprayge.ViewHolder;
 import com.barney.dmcprojectprayge.model.HotelItem;
@@ -32,17 +33,18 @@ public class RestoAdapter extends RecyclerView.Adapter<ViewHolder>{
       @Override
       public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
          holder.txtRestoName.setText(restoItems.get(position).getRestoName());
-         holder.txtRestoRating.setText(restoItems.get(position).getRestoRating());
+         holder.txtRestoRating.setText("Rating: "+ restoItems.get(position).getRestoRating() + "/5");
 
-//         holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//               Intent intent = new Intent(view.getContext(), DetailHotel.class);
-//               intent.putExtra("resto_names", restoItems.get(holder.getAdapterPosition()).getRestoName());
-//               intent.putExtra("resto_ratings", restoItems.get(holder.getAdapterPosition()).getRestoRating());
-//               view.getContext().startActivity(intent);
-//            }
-//         });
+         holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent = new Intent(view.getContext(), DetailRestaurant.class);
+               intent.putExtra("resto_names", restoItems.get(holder.getAdapterPosition()).getRestoName());
+               intent.putExtra("resto_ratings", restoItems.get(holder.getAdapterPosition()).getRestoRating());
+               intent.putExtra("resto_desc", restoItems.get(holder.getAdapterPosition()).getRestoDesc());
+               view.getContext().startActivity(intent);
+            }
+         });
 
       }
 

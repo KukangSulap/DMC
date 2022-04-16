@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailHotel"
+    android:orientation="vertical">
+
+    <ImageView
+        android:src="@drawable/wanmin"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"/>
+
+    <TextView
+        android:padding="5dp"
+        android:id="@+id/txtTitleResto"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:text="TITLE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtDescRatingResto"
+        android:padding="7dp"
+        android:text="rating: 5/5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtDetailDescResto"
+        android:padding="7dp"
+        android:text="desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

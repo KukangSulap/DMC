@@ -44,7 +44,7 @@
                         android:id="@+id/txtRestaurantName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#fff"
+                        android:textColor="#000"
                         android:text="Restaurant Name"
                         android:textSize="30dp"
                         android:textStyle="bold" />
@@ -52,7 +52,7 @@
                     <TextView
                         android:id="@+id/txtRatingRestaurant"
                         android:text="miomio"
-                        android:textColor="#fff"
+                        android:textColor="#000"
                         android:paddingLeft="10dp"
                         android:paddingBottom="5dp"
                         android:layout_gravity="bottom"
