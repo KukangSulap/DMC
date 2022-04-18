@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DMCProjectPrayge">
         <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
             android:name=".DetailRestaurant"
             android:exported="false" />
         <activity
