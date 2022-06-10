@@ -17,34 +17,28 @@
         android:layout_height="wrap_content"
         android:paddingTop="200dp"/>
 
-    <LinearLayout
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/btnHotel"
             android:text="Hotels"
-            android:layout_width="150dp"
+            android:layout_width="170dp"
             android:layout_height="70dp"
-            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
             android:onClick="sendMessage1"/>
 
         <Button
             android:id="@+id/btnRestaurant"
             android:text="Restaurants"
-            android:layout_width="150dp"
+            android:layout_width="170dp"
             android:layout_height="70dp"
-            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
             android:onClick="sendMessage2"/>
 
-    </LinearLayout>
 
     <Button
         android:id="@+id/btnTourSpot"
         android:text="Tourist Spots"
-        android:layout_width="150dp"
+        android:layout_width="170dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
         android:onClick="sendMessage3"

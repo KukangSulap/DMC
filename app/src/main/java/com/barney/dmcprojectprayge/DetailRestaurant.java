@@ -14,7 +14,6 @@ public class DetailRestaurant extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_restaurant);
-
         txtTitleResto = findViewById(R.id.txtTitleResto);
         txtDetailDescResto = findViewById(R.id.txtDetailDescResto);
         txtDetailRatingResto = findViewById(R.id.txtDescRatingResto);

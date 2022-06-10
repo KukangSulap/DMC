@@ -31,7 +31,7 @@ public class login extends AppCompatActivity {
                     if (username.getText().toString().equals("admin") && password.getText().toString().equals("")){
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     }else{
-                            throw new Exception("Username atau Password Salah");
+                            throw new Exception();
                     }
 
                 }catch (Exception e){

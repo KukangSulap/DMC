@@ -11,6 +11,7 @@ import com.barney.dmcprojectprayge.model.HotelItem;
 import com.barney.dmcprojectprayge.model.ResponseHotel;
 import com.barney.dmcprojectprayge.rest.ApiInterface;
 import com.barney.dmcprojectprayge.rest.ApiService;
+import com.google.gson.JsonArray;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class ListHotelActivity extends AppCompatActivity {
     private RecyclerView view;
     HotelAdapter adapter;
     private int adapterPosition;
+    String id_hotel, hotel_name, hotel_desc, hotel_rating;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
