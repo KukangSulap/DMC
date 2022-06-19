@@ -1,9 +1,11 @@
 package com.barney.dmcprojectprayge;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Build;
 import android.os.Bundle;
 
 import com.barney.dmcprojectprayge.adapter.HotelAdapter;
@@ -14,6 +16,7 @@ import com.barney.dmcprojectprayge.rest.ApiService;
 import com.google.gson.JsonArray;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -24,7 +27,7 @@ public class ListHotelActivity extends AppCompatActivity {
     private RecyclerView view;
     HotelAdapter adapter;
     private int adapterPosition;
-    String id_hotel, hotel_name, hotel_desc, hotel_rating;
+    private String id_hotel, hotel_name, hotel_desc, hotel_rating, ushi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +46,18 @@ public class ListHotelActivity extends AppCompatActivity {
         ApiInterface apiService = ApiService.getInstance();
         Call<ResponseHotel> call = apiService.apiServiceHotel();
         call.enqueue(new Callback<ResponseHotel>() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onResponse(Call<ResponseHotel> call, Response<ResponseHotel> response) {
-                System.out.println("error nya: " + response.code());
                 List<HotelItem> hotelItems = response.body().getHotel();
-                System.out.println("Size: " + hotelItems.size());
+                ushi = getIntent().getStringExtra("lokasi");
+                List<HotelItem> pupui = hotelItems
+                        .stream()
+                        .filter(c -> c.getTourSpotTdkt().startsWith(ushi))
+                        .collect(Collectors.toList());
+
                 view.setLayoutManager(new LinearLayoutManager(ListHotelActivity.this));
-                HotelAdapter adapter = new HotelAdapter(hotelItems);
+                HotelAdapter adapter = new HotelAdapter(pupui);
                 view.setAdapter(adapter);
 
             }

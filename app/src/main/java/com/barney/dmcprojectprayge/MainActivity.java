@@ -15,13 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Button btnHotel = findViewById(R.id.btnHotel);
-//        Button btnRestaurant = findViewById(R.id.btnRestaurant);
-//        Button btnTour = findViewById(R.id.btnTourSpot);
     }
 
     public void sendMessage1(View view) {
-        Intent intent = new Intent(MainActivity.this, ListHotelActivity.class);
+        Intent intent = new Intent(MainActivity.this, PilihLokasiActivity.class);
         startActivity(intent);
     }
 

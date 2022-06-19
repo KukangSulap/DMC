@@ -16,6 +16,9 @@ public class HotelItem{
 	@SerializedName("hotel_name")
 	private String hotelName;
 
+	@SerializedName("tour_spot_tdkt")
+	private String tourSpotTdkt;
+
 	public String getIdHotel(){
 		return idHotel;
 	}
@@ -30,6 +33,10 @@ public class HotelItem{
 
 	public String getHotelName(){
 		return hotelName;
+	}
+
+	public String getTourSpotTdkt(){
+		return tourSpotTdkt;
 	}
 
 	@Override
