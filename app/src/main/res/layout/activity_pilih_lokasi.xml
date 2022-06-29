@@ -10,7 +10,7 @@
     android:gravity="center">
 
     <TextView
-        android:text="Pilih Tempat Pariwisata"
+        android:text="Choose Tour Spot Destination"
         android:textSize="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

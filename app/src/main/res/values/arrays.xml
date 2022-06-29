@@ -2,7 +2,6 @@
 <resources>
     <string-array name="tour_spot">
         <item>Monstadt</item>
-        <item>Monstadt</item>
         <item>Liyue</item>
         <item>Inazuma</item>
     </string-array>

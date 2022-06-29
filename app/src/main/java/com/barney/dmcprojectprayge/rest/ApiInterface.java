@@ -2,11 +2,10 @@ package com.barney.dmcprojectprayge.rest;
 
 import com.barney.dmcprojectprayge.model.ResponseHotel;
 import com.barney.dmcprojectprayge.model.ResponseResto;
-import com.google.gson.JsonArray;
+import com.barney.dmcprojectprayge.model.ResponseTourSpot;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Query;
 
 public interface ApiInterface {
     @GET("read_hotel.php")
@@ -14,5 +13,8 @@ public interface ApiInterface {
 
     @GET("read_resto.php")
     Call<ResponseResto> apiServiceResto();
+
+    @GET("read_tour.php")
+    Call<ResponseTourSpot> apiServiceTourSpot();
 
 }

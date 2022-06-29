@@ -11,15 +11,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.barney.dmcprojectprayge.DetailHotel;
 import com.barney.dmcprojectprayge.R;
 import com.barney.dmcprojectprayge.ViewHolder;
-import com.barney.dmcprojectprayge.model.HotelItem;
+import com.barney.dmcprojectprayge.model.TourSpotItem;
 
 import java.util.List;
 
-class TourSpotAdapter extends RecyclerView.Adapter<ViewHolder>{
-   private List<HotelItem> hotelItems;
+public class TourSpotAdapter extends RecyclerView.Adapter<ViewHolder>{
+   private List<TourSpotItem> tourSpotItems;
 
-   public TourSpotAdapter(List<HotelItem> hotelItems) {
-      this.hotelItems = hotelItems;
+   public TourSpotAdapter(List<TourSpotItem> tourSpotItems) {
+      this.tourSpotItems = tourSpotItems;
    }
 
    @Override
@@ -30,15 +30,16 @@ class TourSpotAdapter extends RecyclerView.Adapter<ViewHolder>{
 
    @Override
    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-      holder.txtTourSpotName.setText(hotelItems.get(position).getHotelName());
-      holder.txtTourSpotDesc.setText(hotelItems.get(position).getHotelDesc());
+      holder.txtTourSpotName.setText(tourSpotItems.get(position).getTourName());
+      holder.txtTourSpotDesc.setText(tourSpotItems.get(position).getTourDesc());
+      holder.txtTourSpotRating.setText(tourSpotItems.get(position).getTourRating()+"/5");
 
       holder.itemView.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View view) {
             Intent intent = new Intent(view.getContext(), DetailHotel.class);
-            intent.putExtra("hotel_names", hotelItems.get(holder.getAdapterPosition()).getHotelName());
-            intent.putExtra("hotel_desc", hotelItems.get(holder.getAdapterPosition()).getHotelDesc());
+            intent.putExtra("hotel_names", tourSpotItems.get(holder.getAdapterPosition()).getTourName());
+            intent.putExtra("hotel_desc", tourSpotItems.get(holder.getAdapterPosition()).getTourDesc());
             view.getContext().startActivity(intent);
          }
       });
@@ -46,7 +47,9 @@ class TourSpotAdapter extends RecyclerView.Adapter<ViewHolder>{
 
    @Override
    public int getItemCount() {
-      return hotelItems.size();
+      System.out.println("print-an: "+ tourSpotItems);
+      return tourSpotItems.size();
+
    }
 
 }
