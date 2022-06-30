@@ -23,7 +23,6 @@ import retrofit2.Response;
 
 public class ListRestaurantActivity extends AppCompatActivity {
     private RecyclerView view;
-    HotelAdapter adapter;
     private int adapterPosition;
 
     @Override

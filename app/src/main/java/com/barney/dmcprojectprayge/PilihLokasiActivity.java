@@ -43,13 +43,8 @@ public class PilihLokasiActivity extends AppCompatActivity implements AdapterVie
         setContentView(R.layout.activity_pilih_lokasi);
 
         spinner = findViewById(R.id.spinner);
-//        Button buttonOK = findViewById(R.id.buttonOK);
 
         loadData();
-
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-//                tourSpotItems, android.R.layout.simple_spinner_item);
-//        spinner.setAdapter(adapter);
 
     }
 

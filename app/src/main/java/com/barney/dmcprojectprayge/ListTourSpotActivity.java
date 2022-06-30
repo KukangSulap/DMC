@@ -21,7 +21,6 @@ import retrofit2.Response;
 
 public class ListTourSpotActivity extends AppCompatActivity {
     private RecyclerView view;
-    HotelAdapter adapter;
     private int adapterPosition;
 
     @Override
