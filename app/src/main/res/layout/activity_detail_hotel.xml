@@ -6,7 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailHotel"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:src="@drawable/wanmin"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"/>
 
     <TextView
         android:id="@+id/txtTitleHotel"
@@ -15,6 +21,21 @@
         android:layout_marginTop="40dp"
         android:textSize="20dp"
         android:text="TITLE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtDescRatingHotel"
+        android:padding="7dp"
+        android:text="rating: 5/5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtDescNoTelpHotel"
+        android:padding="7dp"
+        android:text="No Telp.: +6281218642817
+"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

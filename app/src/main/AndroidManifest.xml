@@ -27,6 +27,9 @@
             android:name=".DetailHotel"
             android:exported="false" />
         <activity
+            android:name=".DetailTourSpot"
+            android:exported="false" />
+        <activity
             android:name=".ListTourSpotActivity"
             android:exported="false" />
         <activity

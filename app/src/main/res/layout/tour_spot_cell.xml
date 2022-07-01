@@ -35,18 +35,9 @@
             android:layout_height="wrap_content"
             android:textColor="#fff"
             android:text="Tour Spot Name"
-            android:textSize="30dp"
+            android:textSize="50dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/txtDescTourSpot"
-            android:text="miomio"
-            android:textColor="#fff"
-            android:paddingLeft="10dp"
-            android:paddingBottom="5dp"
-            android:layout_gravity="bottom"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"/>
 
     </LinearLayout>
 

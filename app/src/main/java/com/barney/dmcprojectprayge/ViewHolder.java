@@ -17,7 +17,6 @@ public class ViewHolder extends RecyclerView.ViewHolder {
       txtRestoRating = itemView.findViewById(R.id.txtRatingRestaurant);
       txtTourSpotRating = itemView.findViewById(R.id.txtTourSpotRating);
       txtTourSpotName = itemView.findViewById(R.id.txtTourSpotName);
-      txtTourSpotDesc = itemView.findViewById(R.id.txtDescTourSpot);
 
    }
 }

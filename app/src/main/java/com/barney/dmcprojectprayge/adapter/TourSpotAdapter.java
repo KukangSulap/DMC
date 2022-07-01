@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.barney.dmcprojectprayge.DetailHotel;
+import com.barney.dmcprojectprayge.DetailRestaurant;
+import com.barney.dmcprojectprayge.DetailTourSpot;
 import com.barney.dmcprojectprayge.R;
 import com.barney.dmcprojectprayge.ViewHolder;
 import com.barney.dmcprojectprayge.model.TourSpotItem;
@@ -31,15 +33,15 @@ public class TourSpotAdapter extends RecyclerView.Adapter<ViewHolder>{
    @Override
    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
       holder.txtTourSpotName.setText(tourSpotItems.get(position).getTourName());
-      holder.txtTourSpotDesc.setText(tourSpotItems.get(position).getTourDesc());
       holder.txtTourSpotRating.setText(tourSpotItems.get(position).getTourRating()+"/5");
 
       holder.itemView.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View view) {
-            Intent intent = new Intent(view.getContext(), DetailHotel.class);
-            intent.putExtra("hotel_names", tourSpotItems.get(holder.getAdapterPosition()).getTourName());
-            intent.putExtra("hotel_desc", tourSpotItems.get(holder.getAdapterPosition()).getTourDesc());
+            Intent intent = new Intent(view.getContext(), DetailTourSpot.class);
+            intent.putExtra("tour_names", tourSpotItems.get(holder.getAdapterPosition()).getTourName());
+            intent.putExtra("tour_ratings", tourSpotItems.get(holder.getAdapterPosition()).getTourRating());
+            intent.putExtra("tour_desc", tourSpotItems.get(holder.getAdapterPosition()).getTourDesc());
             view.getContext().startActivity(intent);
          }
       });

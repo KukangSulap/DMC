@@ -12,8 +12,11 @@
         <entry key="..\:/Gerr/Kuliah/Semester 4/KPL/DMC/DMC/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Gerr/Kuliah/Semester 4/KPL/DMC/DMC/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/Gerr/Kuliah/Semester 4/KPL/DMC/DMC/app/src/main/res/layout/hotel_cell.xml" value="0.17074275362318841" />
-        <entry key="app/src/main/res/layout/activity_detail_hotel.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1225" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1225" />
+        <entry key="app/src/main/res/layout/activity_detail_hotel.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_detail_restaurant.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_detail_tour_spot.xml" value="0.2024567788898999" />
         <entry key="app/src/main/res/layout/activity_list_hotel.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/layout/activity_list_restaurant.xml" value="0.1638888888888889" />
         <entry key="app/src/main/res/layout/activity_list_tour_spot.xml" value="0.1638888888888889" />
