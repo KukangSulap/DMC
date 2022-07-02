@@ -10,9 +10,6 @@ sonarqube {
         property "sonar.projectKey", "DMC"
     }
 }
-
-
-
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
