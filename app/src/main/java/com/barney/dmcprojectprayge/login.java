@@ -41,4 +41,11 @@ public class login extends AppCompatActivity {
         });
 
     }
+
+    static boolean Check(String username, String password){
+        if (username == "admin" && password == "password"){
+            return true;
+        }
+        return false;
+    }
 }

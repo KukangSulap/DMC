@@ -57,7 +57,6 @@ public class PilihLokasiActivity extends AppCompatActivity implements AdapterVie
             public void onResponse(Call<ResponseTourSpot> call, Response<ResponseTourSpot> response) {
                 tourSpotItems = response.body().getTourSpot();
                 miomio();
-
             }
 
             @Override
